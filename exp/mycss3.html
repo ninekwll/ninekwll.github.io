@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css" rel="stylesheet">
+        .round {
+            margin:20px auto ;
+            height:300px;
+            width:300px;
+            border:1px solid #0CF;
+            border-radius:50%;
+            display:block;
+        }
+        .shadow {
+            margin:20px auto ;
+            height:300px;
+            width:300px;
+            background-color: #0f795f;
+            border:1px solid #cc0;
+            box-shadow: 5px -5px 5px blueviolet;
+        }
+        .textshadow {
+            font-size:36px ;
+            text-align: center;
+            text-shadow:-2px -2px 2px #0f795f;
+        }
+        .topt {
+            margin:20px auto ;
+            height:300px;
+            width:300px;
+            background-color: rgba(255,0,0,0.2);
+            border:6px solid #cc0;
+        }
+        .out {
+            margin:20px auto ;
+            height:300px;
+            width:300px;
+            border:1px solid #cc0;
+            outline:6px solid #0c0;
+            outline-offset: -20px;
+            padding:20px;
+        }
+        .rot {
+            margin:20px auto ;
+            height:300px;
+            width:300px;
+            border:2px solid #cc0;
+            transform:rotate(20deg);
+        }
+        .textref {
+            font-size:36px ;
+            text-align: center;
+            -webkit-box-reflect: below 10px -webkit-gradient(linear,left top,left
+            bottom,from(transparent),to(rgba(255,255,255,0.1) ) );
+        }
+        .trans {
+            margin:60px auto ;
+            height:300px;
+            width:300px;
+            border:1px solid #cc0;
+            transition:   transform 2s;
+        }
+        .trans:hover
+        {
+
+            transform:rotate(20deg);
+
+        }
+        .ani {
+            margin:60px auto ;
+            height:300px;
+            width:300px;
+            border:1px solid #cc0;
+            animation: donghua 20s infinite ;
+        }
+        @keyframes donghua
+        {
+            from
+            {
+                height:300px;
+                width:300px;
+                transform:rotate(0deg);
+                border-radius:100%;
+                background-color: red;
+
+            }
+            to
+            {
+                height:200px;
+                width:200px;
+                transform:rotate(20deg);
+                border-radius:50%;
+                background-color: blue;
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <p style="text-align: center">边框圆角</p>
+    <div class="round">
+    </div>
+    <p style="text-align: center">插入圆角图片</p>
+    <img class="round" src="saber.png" alt="saber" />
+    <p style="text-align: center">盒阴影</p>
+    <div class="shadow">
+    </div>
+    <p class="textshadow" >文字阴影</p>
+    <p style="text-align: center">透明度</p>
+    <div class="opt">
+    </div>
+    <p style="text-align: center">outline</p>
+    <div class="out">
+        <img src="saber.png" alt="saber" />
+    </div>
+    <p style="text-align: center">旋转</p>
+    <div class="rot">
+    </div>
+    <p class="textref" >镜面反射</p>
+    <p style="margin-top:100px;text-align: center">过渡</p>
+    <div class="trans">
+    </div>
+    <p style="text-align: center">动画</p>
+    <div class="ani">
+    </div>
+</body>
+</html>
