@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>邮资计算</title>
+<script type="text/javascript">
+function show(){
+    //利用document对象，获得页面中半径文本框中的输入值
+	let weight=document.getElementById('weight').value;
+	let postage=0;
+	if(weight<=20){
+		postage=80;
+	}else if(weight<=40){
+		postage=160;
+	}else if(weight<=60){
+		postage=240;
+	}else if(weight<=80){
+		postage=320;
+	}else if(weight<=100){
+		postage=400;
+	}else if(weight>100){
+		postage="超重";
+	}else{postage="重量必须是0-100之间的数！";}
+	document.getElementById('postage').value=postage+"分";
+}
+</script>
+</head>
+<body>
+<form action="">
+  <label>信函重量：</label>
+  <label for="weight"></label><input type="text" name="weight" id="weight">
+  <input type="button" value="计算!" onclick="show()" >
+  <br>
+  <label>应付邮资：</label>
+  <label for="postage"></label><input type="text" name="postage" id="postage" readonly>
+</form>
+</body>
+</html>
