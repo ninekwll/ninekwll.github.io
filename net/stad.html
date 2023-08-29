@@ -9,7 +9,7 @@
     .mid
     {
 		width: 150px;
-        margin:auto ;
+                margin:50 auto ;
 		line-height: 1.15em;
     }
 	h1.f
@@ -22,13 +22,28 @@
 		font-size:18px;
 		color:green;
 	}
-
     
-</style>    
+</style>  
+	
+<script type="text/javascript">
+ /* 参数：color  表格新的背景色；描述：改变表格的背景颜色   */
+function changeColor(color){
+	let my_p = document.getElementById(color);
+	my_p.style.color = color;
+}
+	
+function change_Color(){
+	let white_p = document.getElementById("white");
+	white_p.style.color = "black";
+}
+</script>	
+	
     
 </head>
 
 <body>
+	
+
 	
 	<div>
 	登鹳雀楼
@@ -42,17 +57,21 @@
 	<div>
 	<h1>登鹳雀楼</h1>
    <h2>作者：王之涣</h2>
-<p>白日依山尽，</p><p>黄河入海流。</p>
-<p>欲穷千里目，</p><p>更上一层楼。</p> 	
+   <p>白日依山尽，</p>
+   <p>黄河入海流。</p>
+   <p>欲穷千里目，</p>
+   <p>更上一层楼。</p> 	
 	</div>	
 	
 	<hr />
 
 	<div class="mid">
 	<h1 class="f">登鹳雀楼</h1>
-   <h2 class="f">作者：王之涣</h2>
-<p>白日依山尽，</p><p>黄河入海流。</p>
-<p>欲穷千里目，</p><p>更上一层楼。</p> 	
+       <h2 class="f" onclick="change_Color()">作者：王之涣</h2>
+		<p id ="white" onclick="changeColor('white')">白日依山尽，</p>
+		<p id ="yellow" onclick="changeColor('yellow')">黄河入海流。</p>
+		<p id ="red" onclick="changeColor('red')">欲穷千里目，</p>
+		<p>更上一层楼。</p> 	
 	</div>	
 	
 	
